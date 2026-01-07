@@ -5,6 +5,61 @@ tortoisgit 깔기
 c 드라이브 밑에 git 폴더 설정
 해당폴더에서 git bash 실행 -> git clone 레포주소
 
-bash 명령어
+<bash 명령어 정리>
 git push origin main
 git pull origin main
+
+1. 상태·기본 확인
+- 현재 상태 보기
+	git status
+- 브랜치 목록 + 현재 브랜치 확인
+	git branch
+
+2. 브랜치 관련 (생성/이동/삭제)
+- 새 브랜치 만들고 바로 이동
+	git checkout -b 브랜치이름
+	예) git checkout -b feature/login
+
+- 브랜치만 만들고, 이동은 나중에
+	git branch 브랜치이름
+
+- 다른 브랜치로 이동
+	git checkout 브랜치이름
+
+-브랜치 삭제 (이미 다른 브랜치로 이동해 있는 상태에서)
+	git branch -d 브랜치이름
+
+3. 로컬 작업 루틴 (파일 수정 → 커밋)
+- 변경 확인
+	git status
+
+- 변경 스테이지에 올리기
+	특정 파일만: git add 파일이름
+	전부: git add .
+
+- 커밋 만들기
+	git commit -m "의미 있는 메시지"
+
+4. 원격 저장소 관련 (pull / push)
+- 처음에 GitHub 레포 연결
+	git remote add origin 원격URL
+
+- 작업 시작 전에 최신 내용 받기
+	git pull origin main
+
+- 현재 브랜치를 원격에 올리기 (브랜치 처음 올릴 때)
+	git push origin 브랜치이름
+	예) git push origin sample
+
+- main을 원격에 올리기
+	git push origin main
+
+- 첫 push에 추적 설정까지 같이 (한 번만)
+	git push -u origin 브랜치이름
+
+5. 브랜치 → main으로 합치기(개념 흐름)
+- 작업 브랜치에서 push까지 한 뒤 GitHub에서
+“Compare & pull request” 클릭
+
+- 변경 내용 확인
+“Merge pull request”로 main에 합치기
