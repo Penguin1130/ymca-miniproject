@@ -4,3 +4,7 @@ msysgit 깔기
 tortoisgit 깔기
 c 드라이브 밑에 git 폴더 설정
 해당폴더에서 git bash 실행 -> git clone 레포주소
+
+bash 명령어
+git push origin main
+git pull origin main
